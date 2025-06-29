@@ -1,0 +1,539 @@
+body {
+ font-family: 'Montserrat', Arial, sans-serif;
+ background: #f7f8fa;
+ margin: 0;
+ padding: 0;
+ overflow-x: hidden; /* Предотвращаем горизонтальную прокрутку */
+ }
+
+ .form-block {
+ width: 100%;
+ max-width: 950px; /* Слегка уменьшим, чтобы не было слишком широко на больших экранах */
+ min-width: 0;
+ margin: 40px auto 0 auto;
+ font-family: 'Montserrat', Arial, sans-serif;
+ background: #fff;
+ border-radius: 18px;
+ box-shadow: 0 4px 32px rgba(0,0,0,0.08);
+ padding: 36px 4vw 32px 4vw;
+ box-sizing: border-box;
+ }
+
+ .form-label {
+ font-size: 16px;
+ font-weight: 500;
+ margin-bottom: 14px;
+ color: #222;
+ }
+
+ .form-row {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ margin-bottom: 14px;
+ }
+
+ .form-row .form-label {
+ margin-bottom: 0;
+ }
+
+ .btn-group {
+ display: flex;
+ align-items: center;
+ gap: 12px;
+ }
+
+ .info-btn {
+ background: #e3f2fd;
+ color: #1976d2;
+ border: 1px solid #bbdefb;
+ border-radius: 12px;
+ width: 40px;
+ height: 40px;
+ padding: 0;
+ cursor: pointer;
+ transition: all 0.2s ease;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ }
+
+ .info-btn:hover {
+ background: #bbdefb;
+ color: #1565c0;
+ border-color: #90caf9;
+ }
+
+ .info-btn svg {
+ width: 24px;
+ height: 24px;
+ }
+
+ .reset-btn {
+ background: #fbe9e7;
+ color: #d32f2f;
+ border: 1px solid #ffcdd2;
+ border-radius: 12px; /* Изменено с 50% */
+ width: 40px;
+ height: 40px;
+ padding: 0;
+ cursor: pointer;
+ transition: all 0.2s ease;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ }
+
+ .reset-btn:hover {
+ background: #ffcdd2;
+ color: #c62828;
+ border-color: #ef9a9a;
+ }
+
+ .reset-btn svg {
+ width: 22px; /* Уменьшил размер */
+ height: 22px; /* Уменьшил размер */
+ transition: transform 0.3s ease;
+ }
+
+ .select-wrap {
+ background: #f3f4f7;
+ border-radius: 14px;
+ padding: 0;
+ margin-bottom: 24px;
+ display: flex;
+ align-items: center;
+ position: relative;
+ width: 100%;
+ min-width: 0;
+ box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+ box-sizing: border-box;
+ }
+
+ .select-wrap select {
+ border: none;
+ background: transparent;
+ font-size: 15px;
+ color: #444;
+ width: 100%;
+ outline: none;
+ appearance: none;
+ padding: 16px 44px 16px 16px;
+ border-radius: 14px;
+ font-family: 'Montserrat', Arial, sans-serif;
+ font-weight: 400;
+ cursor: pointer;
+ transition: background 0.2s;
+ box-sizing: border-box;
+ }
+
+ .select-wrap select:focus {
+ background: #e9f7f5;
+ }
+
+ .select-wrap select option {
+ font-size: 15px;
+ color: #444;
+ }
+
+ .select-icon {
+ position: absolute;
+ right: 18px;
+ width: 18px;
+ height: 18px;
+ pointer-events: none;
+ }
+
+ .cat-list {
+ width: 100%;
+ margin-top: 0;
+ display: flex;
+ flex-wrap: wrap;
+ gap: 0 32px;
+ box-sizing: border-box;
+ }
+
+ .cat-list label {
+ display: flex;
+ align-items: center;
+ justify-content: space-between; /* Распределяем место между элементами */
+ font-size: 14px;
+ margin-bottom: 8px;
+ color: #444;
+ cursor: pointer;
+ width: 260px;
+ min-width: 140px;
+ white-space: normal;
+ word-break: break-word;
+ border-radius: 8px;
+ padding: 4px 8px;
+ transition: background 0.2s, color 0.2s;
+ font-family: 'Montserrat', Arial, sans-serif;
+ box-sizing: border-box;
+ }
+
+ .cat-list .cat-name {
+ flex-grow: 1; /* Позволяем названию категории занимать максимум места */
+ }
+
+ .plan-value {
+ font-weight: 500;
+ color: #497be6;
+ background-color: #eef2fa;
+ padding: 6px 12px;
+ border-radius: 12px;
+ font-size: 13px;
+ flex-shrink: 0;
+ border: 1px solid #dbe6f9;
+ transition: all 0.2s ease;
+ }
+
+ .cat-list label .plan-value {
+ margin-left: 12px;
+ }
+
+ .cat-list input[type="checkbox"] {
+ display: none;
+ }
+
+ .cat-list label.selected {
+ background: #e0f7f4;
+ color: #1bbfa0;
+ font-weight: 500;
+ }
+
+ .cat-list label.selected .plan-value {
+ background-color: #ccece6;
+ color: #159a80;
+ border-color: #a3e4d7;
+ }
+
+ .calc-list {
+ margin-top: 32px;
+ display: grid;
+ grid-template-columns: repeat(2, 1fr);
+ gap: 32px;
+ box-sizing: border-box;
+ }
+
+ .calc-block {
+ background: #fff;
+ border-radius: 18px;
+ box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+ padding: 32px;
+ min-width: 0;
+ font-family: 'Montserrat', Arial, sans-serif;
+ box-sizing: border-box;
+ display: flex;
+ flex-direction: column;
+ }
+
+ .calc-title-row {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ margin-bottom: 18px;
+ }
+
+ .calc-title {
+ font-size: 20px;
+ font-weight: 500;
+ color: #222;
+ text-align: left;
+ }
+
+ .calc-label {
+ font-size: 0.8em; /* Уменьшаем шрифт */
+ display: block; /* Ставим над инпутом */
+ margin-bottom: 4px;
+ }
+
+ .calc-input, select.calc-input {
+ width: 100%;
+ box-sizing: border-box;
+ margin-bottom: 12px; /* Увеличим отступ для лучшего вида */
+ padding: 10px;
+ border: 1px solid #ddd;
+ border-radius: 8px;
+ background-color: #f9f9f9;
+ font-size: 1em;
+ transition: border-color 0.3s, box-shadow 0.3s;
+ }
+
+ .calc-input:focus, select.calc-input:focus {
+    border-color: #a3e4d7;
+    box-shadow: 0 0 5px rgba(27, 191, 160, 0.2);
+    background-color: #e9f7f5;
+    outline: none;
+}
+
+/* Стили для плейсхолдеров */
+.calc-input::placeholder {
+    color: #999;
+    font-size: 0.85em; /* Уменьшаем размер шрифта плейсхолдера */
+}
+
+@media (max-width: 768px) {
+    .calc-input::placeholder {
+        font-size: 0.7em; /* Еще меньше для мобильных */
+    }
+}
+
+.calc-result-group {
+ display: flex;
+ flex-direction: column;
+ margin-top: 15px;
+ }
+
+ .result-line {
+ display: flex;
+ justify-content: space-between;
+ align-items: baseline;
+ }
+
+ .result-line:not(:last-child) {
+ margin-bottom: 8px; /* Space between stacked items */
+ }
+
+ /* --- Responsive Layout --- */
+
+ /* Result and Add are always stacked */
+ .result-line:not(:last-child) {
+ margin-bottom: 8px;
+ }
+
+ .calc-row {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ gap: 12px;
+ margin-top: auto;
+ padding-top: 18px;
+ }
+
+ .calc-result-group {
+ display: flex;
+ align-items: baseline;
+ gap: 8px;
+ flex-grow: 1;
+ min-width: 0;
+ }
+
+ .result-line, .add-line {
+ display: flex;
+ align-items: baseline;
+ gap: 8px;
+ }
+
+ .calc-result-label {
+ font-size: 14px;
+ color: #333;
+ line-height: 1.1;
+ flex-shrink: 0;
+ }
+
+ .calc-result-value {
+ font-size: 22px; /* Уменьшено */
+ font-weight: 700;
+ color: #e53935;
+ text-align: left;
+ word-break: break-all; /* Перенос длинных чисел */
+ flex-grow: 1; /* Занимает оставшееся место */
+ display: flex;
+ align-items: center;
+ }
+
+ .calc-result-value.done {
+ color: #2e7d32;
+ font-weight: 700;
+ font-size: 18px; /* Уменьшено */
+ white-space: nowrap;
+ }
+
+ .calc-btn {
+ padding: 0;
+ width: 46px;
+ height: 46px;
+ background: #e0f7f4;
+ color: #1bbfa0;
+ border: 1px solid #a3e4d7;
+ border-radius: 14px;
+ cursor: pointer;
+ transition: all 0.2s;
+ flex-shrink: 0; /* Не сжимается */
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ }
+
+ .calc-btn:hover {
+ background: #ccece6;
+ color: #159a80;
+ }
+
+ .calc-btn svg {
+ width: 22px;
+ height: 22px;
+ stroke: currentColor;
+ stroke-width: 2.5;
+ stroke-linecap: round;
+ stroke-linejoin: round;
+ fill: none;
+ }
+
+ /* --- Мобильная адаптация --- */
+ @media (max-width: 900px) {
+ .form-block {
+ width: 100%; /* Правильная ширина */
+ padding: 18px;
+ margin: 16px 0 0 0;
+ border-radius: 0;
+ }
+ .cat-list label {
+ width: calc(50% - 16px); /* По 2 в ряд */
+ }
+ .calc-list {
+ grid-template-columns: 1fr;
+ gap: 18px;
+ }
+ .calc-block {
+ max-width: 100%;
+ padding: 20px;
+ }
+ }
+
+ @media (max-width: 600px) {
+ .form-block {
+ padding: 16px;
+ margin: 0;
+ box-shadow: none;
+ }
+ .cat-list {
+ gap: 0;
+ }
+ .cat-list label {
+ width: 100%; /* По 1 в ряд */
+ }
+ .calc-block {
+ padding: 16px;
+ margin-bottom: 12px;
+ }
+
+ .calc-result-group {
+ flex-direction: column;
+ align-items: flex-start;
+ gap: 4px;
+ }
+
+ .calc-title {
+ font-size: 18px;
+ margin-bottom: 12px;
+ }
+ .calc-label {
+ font-size: 14px;
+ }
+ .calc-input, select.calc-input {
+ font-size: 16px; /* Уменьшаем для мобильных устройств */
+ padding: 12px;
+ margin-bottom: 12px;
+ }
+
+ .calc-result-label,
+ .calc-result-value {
+ text-align: left; /* Убираем центрирование */
+ }
+
+ .calc-result-value {
+ font-size: 18px;
+ }
+
+ .calc-result-value.done {
+ font-size: 15px;
+ }
+ }
+
+ /* Modal Styles */
+ .modal {
+ display: none; 
+ position: fixed; 
+ z-index: 1000; 
+ left: 0;
+ top: 0;
+ width: 100%;
+ height: 100%;
+ overflow: auto; 
+ background-color: rgba(0,0,0,0.5); 
+ animation: fadeIn 0.3s;
+ }
+
+ @keyframes fadeIn {
+ from {opacity: 0;}
+ to {opacity: 1;}
+ }
+
+ .modal-content {
+ background-color: #fff;
+ margin: 10% auto;
+ padding: 24px 32px;
+ width: 80%;
+ max-width: 600px;
+ border-radius: 18px;
+ position: relative;
+ box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+ animation: slideIn 0.3s;
+ }
+ 
+ @keyframes slideIn {
+ from {transform: translateY(-30px); opacity: 0;}
+ to {transform: translateY(0); opacity: 1;}
+ }
+
+ .close-btn {
+ color: #aaa;
+ float: right;
+ font-size: 32px;
+ font-weight: bold;
+ line-height: 1;
+ cursor: pointer;
+ }
+
+ .close-btn:hover,
+ .close-btn:focus {
+ color: black;
+ text-decoration: none;
+ }
+
+ .modal-content h2 {
+ margin-top: 0;
+ font-weight: 500;
+ color: #333;
+ margin-bottom: 20px; /* Добавлен отступ */
+ }
+
+ .modal-content p {
+ font-size: 15px;
+ line-height: 1.6;
+ color: #555;
+ margin-bottom: 16px;
+ }
+
+ .modal-content p:last-child {
+ margin-bottom: 0;
+ }
+
+ .modal-content li {
+ font-size: 15px;
+ line-height: 1.6;
+ color: #555;
+ margin-bottom: 8px;
+ }
+
+ .modal-content li:last-child {
+ margin-bottom: 0;
+ }
+
+ .modal-content ul {
+ padding-left: 20px;
+ margin-top: 8px;
+ margin-bottom: 16px;
+ }

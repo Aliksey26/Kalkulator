@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор Доли</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="form-block">
+        <div class="form-row">
+            <div class="form-label">Сеть:</div>
+            <div class="btn-group">
+                <button id="info-btn" class="info-btn" title="Инструкция">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="12" y1="16" x2="12" y2="12"></line>
+                        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                    </svg>
+                </button>
+                <button id="reset-btn" class="reset-btn" title="Сбросить данные">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <polyline points="23 4 23 10 17 10"></polyline>
+                        <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="select-wrap">
+            <select id="network">
+                <option value="" disabled selected>Выберите сеть:</option>
+                <option value="Атак">Атак</option>
+                <option value="Ашан">Ашан</option>
+                <option value="Гиперглобус">Гиперглобус</option>
+                <option value="Детский Мир">Детский Мир</option>
+                <option value="Дикси">Дикси</option>
+                <option value="Магнит ГМ">Магнит ГМ</option>
+                <option value="Магнит ДК">Магнит ДК</option>
+                <option value="Магнит КМ">Магнит КМ</option>
+                <option value="Метро">Метро</option>
+                <option value="Окей ГМ">Окей ГМ</option>
+                <option value="Перекресток">Перекресток</option>
+                <option value="Пятёрочка">Пятёрочка</option>
+            </select>
+            <svg class="select-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 9L12 15L18 9" stroke="#497be6" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+            </svg>
+        </div>
+        <div id="categories">
+            <div class="cat-list" id="cat-list"></div>
+        </div>
+        <div class="calc-list" id="calc-list"></div>
+    </div>
+
+    <div id="info-modal" class="modal">
+        <div class="modal-content">
+            <span id="close-btn" class="close-btn">×</span>
+            <h2>Инструкция</h2>
+            <p>1. Выбери в чем будешь проводить расчет доли полки в:</p>
+            <ul>
+                <li>стеллажах</li>
+                <li>полках</li>
+                <li>сантиметрах</li>
+                <li>эталонах (единая единица измерения товара)</li>
+            </ul>
+            <p><strong>Если категория занимает БОЛЕЕ 2 СТЕЛЛАЖЕЙ, то единица измерения будет в ПОЛКАХ; если МЕНЕЕ 1
+                    СТЕЛЛАЖА, то лучше считать в САНТИМЕТРАХ или ЭТАЛОНАМИ</strong></p>
+            <p>2. Для расчета тебе нужно знать 2 цифры: общее количество (Конкуренты+PG) и только продукция PG
+                (PG)</p>
+            <p>3. Посчитай сколько продукции PG, внеси данную цифру измерения в окошко, где написано "Введите PG"</p>
+            <p>4. Посчитай общее количество Конкурентов и PG, внеси данную цифру измерения в окошко "Введите общее
+                количество". Далее нажми "зеленую стрелку"</p>
+            <p>5. Программа оценит результат в % соотношении доли полки факта к плану в окошке "Результат". Если
+                результат подсвечен красным, то не выполнено; если зеленым - выполнено</p>
+            <p>6. Если план не выполнен, то появится цифра в окошке "Добавить:". Нужно добавить данное количество для
+                достижения плана на 100%</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
